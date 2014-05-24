@@ -2,6 +2,7 @@
 /vendor
 /.idea
 /config/production
+/public/assets
 composer.phar
 .env.*.php
 .env.php

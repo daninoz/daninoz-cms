@@ -1,0 +1,8 @@
+{
+  "name": "Daninoz CMS",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.0.3",
+    "bootstrap-confirmation": "*"
+  }
+}

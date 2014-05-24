@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+}
+
+.table tbody>tr>td.vert-align {
+    vertical-align: middle;
+}
+
+form .img-form {
+    display: block;
+    max-width: 100%;
+    max-height: 250px;
+    margin-bottom: 10px;
+}
+
+#wrap {
+    height: auto;
+    margin: 0 auto -75px;
+    min-height: 100%;
+    padding: 70px 0 60px;
+}
+
+#wrap > .container {
+    padding: 0px 15px 0;
+}
+
+#footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    background-color: #F5F5F5;
+}
+
+#footer .containter p {
+    margin-bottom: 0px !important;
+}
+
+.select-idioma {
+    margin-top: 22px;
+}
+
+.page-header {
+    margin-top: 0px;
+}
+
+form .alert-danger {
+    margin-top: 10px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+form.delete-form {
+    display: inline-block;
+}
