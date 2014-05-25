@@ -1,5 +1,8 @@
 <?php
 
+namespace DaninozCms\Models;
+
+use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
