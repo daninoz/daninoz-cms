@@ -4,6 +4,9 @@ namespace DaninozCms\Validators;
 
 class Category extends Validator
 {
+    /**
+     * @var array
+     */
     protected $rules = array(
         "create" => array(
             'name' => 'required|unique:categories,name',
