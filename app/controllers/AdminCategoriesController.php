@@ -17,6 +17,8 @@ class AdminCategoriesController extends \BaseController
      */
     public function __construct(CategoriesService $categoriesService)
     {
+        $this->beforeFilter('csrf', ['only' => ['store', 'update', 'destroy']]);
+
         $this->categoriesService = $categoriesService;
     }
 
