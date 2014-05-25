@@ -61,7 +61,7 @@ class AdminCategoriesController extends \BaseController
             return Redirect::back()->withErrors($e->getErrors())->withInput();
         }
 
-        return Redirect::route('admin.categories.index');
+        return Redirect::route('admin.categories.index')->withSuccessMessage('Category created');
 	}
 
 	/**
@@ -91,7 +91,7 @@ class AdminCategoriesController extends \BaseController
             return Redirect::back()->withErrors($e->getErrors())->withInput();
         }
 
-        return Redirect::route('admin.categories.index');
+        return Redirect::route('admin.categories.index')->withSuccessMessage('Category Updated');
 	}
 
 	/**
@@ -105,7 +105,7 @@ class AdminCategoriesController extends \BaseController
 		try {
             $this->categoriesService->delete($id);
         } catch (DeleteException $e) {
-            return Redirect::back()->withErrors($e->getMessage());
+            return Redirect::back()->withErrors($e->getMessage())->withErrorMessage('Can\'t delete a Category with Posts');
         }
 
         return Redirect::route('admin.categories.index');

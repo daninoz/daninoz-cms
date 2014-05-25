@@ -13,6 +13,7 @@
 <body>
 <div id="wrap">
     @include('admin._partials.header')
+    @include('admin._partials.messages')
     @yield('content')
 </div>
 @include('admin._partials.footer')
