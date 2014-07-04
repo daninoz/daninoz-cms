@@ -17,7 +17,6 @@
     @yield('content')
 </div>
 @include('admin._partials.footer')
-
 @include('admin._partials.scripts')
 </body>
 </html>

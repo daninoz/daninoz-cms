@@ -56,7 +56,7 @@ class AdminCategoriesController extends \BaseController
 	public function store()
 	{
 		try {
-            $this->categoriesService->create(Input::all());
+            $this->categoriesService->create(Input::only('name'));
         } catch (ValidationException $e) {
             return Redirect::back()->withErrors($e->getErrors())->withInput();
         }
@@ -86,7 +86,7 @@ class AdminCategoriesController extends \BaseController
 	public function update($id)
 	{
         try {
-            $this->categoriesService->update($id, Input::all());
+            $this->categoriesService->update($id, Input::only('name'));
         } catch (ValidationException $e) {
             return Redirect::back()->withErrors($e->getErrors())->withInput();
         }

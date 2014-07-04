@@ -7,6 +7,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="{{ route('admin.categories.index') }}">Categories</a></li>
+                <li><a href="{{ route('admin.tags.index') }}">Tags</a></li>
             </ul>
         </div>
     </div>

@@ -15,7 +15,11 @@ class RepositoriesServiceProvider extends ServiceProvider
     {
         $app = $this->app;
 
-        $app->bind('DaninozCms\Repositories\Categories\CategoriesRepositoryInterface', 'DaninozCms\Repositories\Categories\CategoriesEloquentRepository');
+        $app->bind('DaninozCms\Repositories\Categories\CategoriesRepositoryInterface',
+            'DaninozCms\Repositories\Categories\CategoriesEloquentRepository');
+
+        $app->bind('DaninozCms\Repositories\Tags\TagsRepositoryInterface',
+            'DaninozCms\Repositories\Tags\TagsEloquentRepository');
     }
 
 }
