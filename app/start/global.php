@@ -87,3 +87,11 @@ require app_path().'/filters.php';
 */
 
 require app_path().'/utilities/form_macros.php';
+
+/*
+|--------------------------------------------------------------------------
+| Require The Custom Validation Rules
+|--------------------------------------------------------------------------
+*/
+
+require app_path().'/utilities/validation_rules.php';

@@ -17,10 +17,18 @@ interface CategoriesRepositoryInterface
     public function getAll();
 
     /**
-     * @param $id
+     * @param $attribute
+     * @param $value
      * @return mixed
      */
-    public function getById($id);
+    public function existsByAttribute($attribute, $value);
+
+    /**
+     * @param $attribute
+     * @param $value
+     * @return mixed
+     */
+    public function getByAttribute($attribute, $value);
 
     /**
      * @param $input

@@ -57,12 +57,33 @@ class CategoriesEloquentRepository implements CategoriesRepositoryInterface
     }
 
     /**
-     * @param $id
-     * @return array|mixed
+     * @param $attribute
+     * @param $value
+     * @return boolean
      */
-    public function getById($id)
+    public function existsByAttribute($attribute, $value)
     {
-        $category = $this->categories->findOrFail($id);
+        $category = $this->categories->where($attribute, $value)->first();
+
+        if (empty($category)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @param $attribute
+     * @param $value
+     * @return boolean
+     */
+    public function getByAttribute($attribute, $value)
+    {
+        $category = $this->categories->where($attribute, $value)->first();
+
+        if (empty($category)) {
+            return null;
+        }
 
         return $category->toArray();
     }

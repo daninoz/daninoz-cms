@@ -23,6 +23,20 @@ interface TagsRepositoryInterface
     public function getById($id);
 
     /**
+     * @param $attribute
+     * @param $value
+     * @return mixed
+     */
+    public function existsByAttribute($attribute, $value);
+
+    /**
+     * @param $attribute
+     * @param $value
+     * @return mixed
+     */
+    public function getByAttribute($attribute, $value);
+
+    /**
      * @param $input
      * @return mixed
      */

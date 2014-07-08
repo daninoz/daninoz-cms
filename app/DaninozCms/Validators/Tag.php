@@ -9,10 +9,10 @@ class Tag extends Validator
      */
     protected $rules = array(
         "create" => array(
-            'name' => 'required|unique:tags,name',
+            'name' => 'required|repo_unique:Tags,name',
         ),
         "update" => array(
-            'name' => 'required|unique:tags,name,:ignore_id:',
+            'name' => 'required|repo_unique:Tags,name,:ignore_id:',
         ),
     );
 }

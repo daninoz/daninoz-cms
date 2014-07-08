@@ -68,6 +68,38 @@ class TagsEloquentRepository implements TagsRepositoryInterface
     }
 
     /**
+     * @param $attribute
+     * @param $value
+     * @return boolean
+     */
+    public function existsByAttribute($attribute, $value)
+    {
+        $tag = $this->tags->where($attribute, $value)->first();
+
+        if (empty($tag)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @param $attribute
+     * @param $value
+     * @return boolean
+     */
+    public function getByAttribute($attribute, $value)
+    {
+        $tag = $this->tags->where($attribute, $value)->first();
+
+        if (empty($tag)) {
+            return null;
+        }
+
+        return $tag->toArray();
+    }
+
+    /**
      * @param $input
      * @return mixed|void
      */

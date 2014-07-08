@@ -9,10 +9,10 @@ class Category extends Validator
      */
     protected $rules = array(
         "create" => array(
-            'name' => 'required|unique:categories,name',
+            'name' => 'required|repo_unique:Categories,name',
         ),
         "update" => array(
-            'name' => 'required|unique:categories,name,:ignore_id:',
+            'name' => 'required|repo_unique:Categories,name',
         ),
     );
 }

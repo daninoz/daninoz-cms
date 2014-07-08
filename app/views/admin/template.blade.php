@@ -16,7 +16,7 @@
     @include('admin._partials.messages')
     @yield('content')
 </div>
-@include('admin._partials.footer')
-@include('admin._partials.scripts')
+    @include('admin._partials.footer')
+    @include('admin._partials.scripts')
 </body>
 </html>
